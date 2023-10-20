@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 1. 매개 변수가 없는 즉시 실행 함수
+      (function () {
+        const message = "이 함수는 즉시 실행 됩니다.";
+        console.log(message);
+      })();
+
+      // 2. 매개 변수가 있는 즉시 실행 함수
+      (function (name) {
+        console.log("안녕하세요 " + name + " 님^^");
+      })("야스오");
+
+      // 1. 매개 변수 2개를 선언한 화살표 함수 선언
+      const add = (x, y) => {
+        return x + y;
+      };
+
+      // 2. 매개 변수 1개를 선언한 화살표 함수
+      const square = (x) => {
+        return x * x;
+      };
+
+      console.log(add(10, 10));
+      console.log(square(10));
+
+      console.log(add);
+      console.log(square);
+    </script>
+  </body>
+</html>
